@@ -1,0 +1,22 @@
+hw/teensy32/libs/yield.o: hw/teensy32/libs/yield.cpp \
+ hw/teensy32/include/core_pins.h hw/teensy32/include/kinetis.h \
+ hw/teensy32/include/pins_arduino.h hw/teensy32/include/HardwareSerial.h \
+ hw/teensy32/include/Stream.h hw/teensy32/include/Print.h \
+ hw/teensy32/include/core_id.h hw/teensy32/include/WString.h \
+ hw/teensy32/include/avr_functions.h hw/teensy32/include/avr/pgmspace.h \
+ hw/teensy32/include/Printable.h hw/teensy32/include/new.h \
+ hw/teensy32/include/usb_serial.h hw/teensy32/include/usb_desc.h \
+ hw/teensy32/include/usb_seremu.h hw/teensy32/include/EventResponder.h \
+ hw/teensy32/include/Arduino.h hw/teensy32/include/WProgram.h \
+ hw/teensy32/include/avr/pgmspace.h hw/teensy32/include/avr/interrupt.h \
+ hw/teensy32/include/wiring.h hw/teensy32/include/binary.h \
+ hw/teensy32/include/core_pins.h hw/teensy32/include/HardwareSerial.h \
+ hw/teensy32/include/avr_emulation.h hw/teensy32/include/usb_serial.h \
+ hw/teensy32/include/usb_seremu.h hw/teensy32/include/usb_keyboard.h \
+ hw/teensy32/include/keylayouts.h hw/teensy32/include/usb_mouse.h \
+ hw/teensy32/include/usb_joystick.h hw/teensy32/include/usb_midi.h \
+ hw/teensy32/include/usb_rawhid.h hw/teensy32/include/usb_flightsim.h \
+ hw/teensy32/include/usb_mtp.h hw/teensy32/include/usb_audio.h \
+ hw/teensy32/include/usb_touch.h hw/teensy32/include/usb_undef.h \
+ hw/teensy32/include/WCharacter.h hw/teensy32/include/elapsedMillis.h \
+ hw/teensy32/include/Arduino.h hw/teensy32/include/IntervalTimer.h
