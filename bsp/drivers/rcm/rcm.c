@@ -12,7 +12,7 @@
  * code.
  */
 void outSRS(void){                         //[outSRS]
-  
+#if 0
   /* 	if (RCM_SRS1 & RCM_SRS1_TAMPER_MASK)
 		printf("Tamper Detect Reset\n");*/
   
@@ -64,6 +64,7 @@ void outSRS(void){                         //[outSRS]
 	       printf("[outSRS]RCM_SRS0 is ZERO   = %#02X \r\n", (RCM_SRS0))  ;
 	       printf("[outSRS]RCM_SRS1 is ZERO   = %#02X \r\n", (RCM_SRS1))  ;	 
         }
+#endif
   }
 
 void outsrs(void){

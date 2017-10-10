@@ -107,9 +107,11 @@ TEENSY = teensy_loader_cli
 
 LIB_C_FILES  = ./hw/$(TARGET)/bsp/cpu/start.c
 LIB_C_FILES += ./hw/$(TARGET)/bsp/cpu/sysinit.c
+LIB_C_FILES += ./hw/$(TARGET)/bsp/common/io.c
+LIB_C_FILES += ./hw/$(TARGET)/bsp/common/startup.c
 LIB_C_FILES += ./hw/$(TARGET)/bsp/drivers/uart/uart.c
 LIB_C_FILES += ./hw/$(TARGET)/bsp/drivers/wdog/wdog.c
-#LIB_C_FILES += ./hw/$(TARGET)/bsp/drivers/rcm/rcm.c
+LIB_C_FILES += ./hw/$(TARGET)/bsp/drivers/rcm/rcm.c
 LIB_C_FILES += ./hw/$(TARGET)/bsp/drivers/mcg/mcg.c
 #LIB_C_FILES += ./hw/$(TARGET)/libs/pins_teensy.c
 #LIB_CPP_FILES = ./hw/$(TARGET)/libs/yield.cpp

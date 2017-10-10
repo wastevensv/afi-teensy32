@@ -14331,6 +14331,137 @@ typedef struct WDOG_MemMap {
  * @}
  */ /* end of group WDOG_Peripheral */
 
+/* ----------------------------------------------------------------------------
+   -- RCM
+   ---------------------------------------------------------------------------- */
+
+/*!
+ * @addtogroup RCM_Peripheral RCM
+ * @{
+ */
+
+/** RCM - Peripheral register structure */
+typedef struct RCM_MemMap {
+  uint8_t SRS0;                                    /**< System Reset Status Register 0, offset: 0x0 */
+  uint8_t SRS1;                                    /**< System Reset Status Register 1, offset: 0x1 */
+  uint8_t RESERVED_0[2];
+  uint8_t RPFC;                                    /**< Reset Pin Filter Control register, offset: 0x4 */
+  uint8_t RPFW;                                    /**< Reset Pin Filter Width register, offset: 0x5 */
+  uint8_t RESERVED_1[1];
+  uint8_t MR;                                      /**< Mode Register, offset: 0x7 */
+} volatile *RCM_MemMapPtr;
+
+/* ----------------------------------------------------------------------------
+   -- RCM - Register accessor macros
+   ---------------------------------------------------------------------------- */
+
+/*!
+ * @addtogroup RCM_Register_Accessor_Macros RCM - Register accessor macros
+ * @{
+ */
+
+
+/* RCM - Register accessors */
+#define RCM_SRS0_REG(base)                       ((base)->SRS0)
+#define RCM_SRS1_REG(base)                       ((base)->SRS1)
+#define RCM_RPFC_REG(base)                       ((base)->RPFC)
+#define RCM_RPFW_REG(base)                       ((base)->RPFW)
+#define RCM_MR_REG(base)                         ((base)->MR)
+
+/*!
+ * @}
+ */ /* end of group RCM_Register_Accessor_Macros */
+
+
+/* ----------------------------------------------------------------------------
+   -- RCM Register Masks
+   ---------------------------------------------------------------------------- */
+
+/*!
+ * @addtogroup RCM_Register_Masks RCM Register Masks
+ * @{
+ */
+
+/* SRS0 Bit Fields */
+#define RCM_SRS0_WAKEUP_MASK                     0x1u
+#define RCM_SRS0_WAKEUP_SHIFT                    0
+#define RCM_SRS0_LVD_MASK                        0x2u
+#define RCM_SRS0_LVD_SHIFT                       1
+#define RCM_SRS0_LOC_MASK                        0x4u
+#define RCM_SRS0_LOC_SHIFT                       2
+#define RCM_SRS0_LOL_MASK                        0x8u
+#define RCM_SRS0_LOL_SHIFT                       3
+#define RCM_SRS0_WDOG_MASK                       0x20u
+#define RCM_SRS0_WDOG_SHIFT                      5
+#define RCM_SRS0_PIN_MASK                        0x40u
+#define RCM_SRS0_PIN_SHIFT                       6
+#define RCM_SRS0_POR_MASK                        0x80u
+#define RCM_SRS0_POR_SHIFT                       7
+/* SRS1 Bit Fields */
+#define RCM_SRS1_JTAG_MASK                       0x1u
+#define RCM_SRS1_JTAG_SHIFT                      0
+#define RCM_SRS1_LOCKUP_MASK                     0x2u
+#define RCM_SRS1_LOCKUP_SHIFT                    1
+#define RCM_SRS1_SW_MASK                         0x4u
+#define RCM_SRS1_SW_SHIFT                        2
+#define RCM_SRS1_MDM_AP_MASK                     0x8u
+#define RCM_SRS1_MDM_AP_SHIFT                    3
+#define RCM_SRS1_EZPT_MASK                       0x10u
+#define RCM_SRS1_EZPT_SHIFT                      4
+#define RCM_SRS1_SACKERR_MASK                    0x20u
+#define RCM_SRS1_SACKERR_SHIFT                   5
+/* RPFC Bit Fields */
+#define RCM_RPFC_RSTFLTSRW_MASK                  0x3u
+#define RCM_RPFC_RSTFLTSRW_SHIFT                 0
+#define RCM_RPFC_RSTFLTSRW(x)                    (((uint8_t)(((uint8_t)(x))<<RCM_RPFC_RSTFLTSRW_SHIFT))&RCM_RPFC_RSTFLTSRW_MASK)
+#define RCM_RPFC_RSTFLTSS_MASK                   0x4u
+#define RCM_RPFC_RSTFLTSS_SHIFT                  2
+/* RPFW Bit Fields */
+#define RCM_RPFW_RSTFLTSEL_MASK                  0x1Fu
+#define RCM_RPFW_RSTFLTSEL_SHIFT                 0
+#define RCM_RPFW_RSTFLTSEL(x)                    (((uint8_t)(((uint8_t)(x))<<RCM_RPFW_RSTFLTSEL_SHIFT))&RCM_RPFW_RSTFLTSEL_MASK)
+/* MR Bit Fields */
+#define RCM_MR_EZP_MS_MASK                       0x2u
+#define RCM_MR_EZP_MS_SHIFT                      1
+
+/*!
+ * @}
+ */ /* end of group RCM_Register_Masks */
+
+
+/* RCM - Peripheral instance base addresses */
+/** Peripheral RCM base pointer */
+#define RCM_BASE_PTR                             ((RCM_MemMapPtr)0x4007F000u)
+/** Array initializer of RCM peripheral base pointers */
+#define RCM_BASE_PTRS                            { RCM_BASE_PTR }
+
+/* ----------------------------------------------------------------------------
+   -- RCM - Register accessor macros
+   ---------------------------------------------------------------------------- */
+
+/*!
+ * @addtogroup RCM_Register_Accessor_Macros RCM - Register accessor macros
+ * @{
+ */
+
+
+/* RCM - Register instance definitions */
+/* RCM */
+#define RCM_SRS0                                 RCM_SRS0_REG(RCM_BASE_PTR)
+#define RCM_SRS1                                 RCM_SRS1_REG(RCM_BASE_PTR)
+#define RCM_RPFC                                 RCM_RPFC_REG(RCM_BASE_PTR)
+#define RCM_RPFW                                 RCM_RPFW_REG(RCM_BASE_PTR)
+#define RCM_MR                                   RCM_MR_REG(RCM_BASE_PTR)
+
+/*!
+ * @}
+ */ /* end of group RCM_Register_Accessor_Macros */
+
+
+/*!
+ * @}
+ */ /* end of group RCM_Peripheral */
+
 
 /*
 ** End of section using anonymous unions

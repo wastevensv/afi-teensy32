@@ -7,7 +7,7 @@
  */
 
 	.extern start
-	.extern ___BOOT_STACK_ADDRESS
+	.extern _top_stack
 	
 	.global startup
 	.global _startup
@@ -19,7 +19,7 @@ startup:
 _startup:
 __startup:
     //workaround for CW overwriting SP on first download when using debugger
-    LDR	    r0,=___BOOT_STACK_ADDRESS
+    LDR	    r0,=_top_stack
 	MOV	    sp,r0
 	
     MOV     r0,#0                   // Initialize the GPRs
