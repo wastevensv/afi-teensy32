@@ -1,0 +1,13 @@
+bin/
+obj/
+*.a
+*.o
+*.elf
+*.d
+*.hex
+*~
+\#*
+.#*
+*.zip
+*.log
+*.orig
